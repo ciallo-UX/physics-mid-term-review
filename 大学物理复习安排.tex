@@ -227,9 +227,21 @@ n=\frac{\ln 100}{2\pi\times 0.05}\approx 14.66
 
 \section{三、动量}
 \begin{enumerate}[label=\arabic*.,leftmargin=*]
-    \item 冲量是力对时间的积累。怎么理解这句话？
+    \item 冲量是力对时间的积累。怎么理解这句话？\\
+    \textcolor{blue}{就是在时间上的积累，推箱子不动但动量不变是因为动量定理看的是合外力，此时箱子所受合外力为零}
 
-    \item 阅读3.1，合力的冲量等于各个分力冲量的矢量和。那么合力的做功是否等于分力做功的和呢？试图证明或是证伪。
+    \item 阅读3.1，合力的冲量等于各个分力冲量的矢量和。那么合力的做功是否等于分力做功的和呢？试图证明或是证伪。\\
+    \textcolor{blue}{由于合力为各力的矢量和：
+\[
+\boldsymbol{F}_{\text{合}}=\sum_{i=1}^{n}\boldsymbol{F}_{i}
+\]
+故合力做功
+\[
+W=\int \boldsymbol{F}_{\text{合}}\cdot d\boldsymbol{s}
+=\int \sum_{i=1}^{n}\boldsymbol{F}_{i}\cdot d\boldsymbol{s}
+=\sum_{i=1}^{n}\int \boldsymbol{F}_{i}\cdot d\boldsymbol{s}
+\]
+（$\boldsymbol{F}$ 和 $d\boldsymbol{s}$ 均为矢量，中间为点乘）证毕。}
 
     \item 阅读3.2.2“在应用动量守恒定律时应注意以下几点：”，（3）在质点斜碰或者球非对心碰撞（就是球心的直线和相对速度的直线平行而不重合，如例3-5）的时候会有所运用；（4）在不涉及转动的时候，由于牛顿定律有时候会比较麻烦，所以可以用动量约束和能量约束列方程组，从而舍弃牛顿定律的复杂运算。除非题目让你算加速度。
 

@@ -1,0 +1,634 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{color}%textcolor
+\usepackage{enumitem}  %Missing number, treated as zero.
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\begin{document}
+
+\title{期中考试复习题}
+\author{整理：廖敬远}
+\date{2026.4.22}
+\maketitle
+
+分清敌我、敢于斗争、善于斗争、区别对待、依靠群众、消灭对立。
+
+\section*{题目}
+\textbf{\textcolor{blue}{一火箭初质量为$M_0$，每秒喷出的质量$-\dfrac{dM}{dt}$恒定，喷气相对火箭的速率恒定为$u$。设火箭竖直向上发射，不计空气阻力，重力加速度$g$恒定，则$t=0$时火箭加速度$a$在竖直方向（向上为正）的投影式为[\hspace{1em}]。}}
+
+\begin{enumerate}[label=\Alph*.]
+    \item $a = \dfrac{u}{M_0}\left(-\dfrac{dM}{dt}\right) - g$
+    \item $a = \dfrac{u}{M_0}\left(\dfrac{dM}{dt}\right) + g$
+    \item $a = \dfrac{u}{M_0}\left(-\dfrac{dM}{dt}\right)$
+    \item $a = \dfrac{u}{M_0}\left(\dfrac{dM}{dt}\right) - g$
+\end{enumerate}
+
+\section*{解析}
+[需要考虑重力]本题考查变质量物体的运动方程（密歇尔斯基方程），推导过程如下：
+
+\subsection*{1. 建立方程（竖直向上为正方向）}
+
+变质量物体运动方程推导
+
+\subsection*{动量定理}
+合外力冲量等于动量变化：
+\[
+\vec{F}\,dt = M d\vec{v} + \vec{u}\,dm
+\]
+两边除以 $dt$：
+\[
+\vec{F}
+= M\frac{d\vec{v}}{dt}
++ \vec{u}\frac{dm}{dt}
+\]
+
+\subsection*{ 质量变化关系}
+主体质量减少：$\dfrac{dM}{dt}=-\dfrac{dm}{dt}$，代入得：
+\[
+\boxed{
+M\frac{d\vec{v}}{dt}
+= \vec{F}
++ \vec{u}\frac{dM}{dt}
+}
+\]
+此即**密歇尔斯基方程**。
+
+变质量物体的运动方程为：
+\[
+M \frac{dv}{dt} = F + u_{\text{相对}} \frac{dM}{dt}
+\]
+其中：
+- $M$ 为火箭瞬时质量，$a = \dfrac{dv}{dt}$ 为火箭加速度；
+
+- 外力 $F$ 仅为重力，方向向下，故 $F = -Mg$；
+
+- 喷气相对火箭的速度方向向下，故 $u_{\text{相对}} = -u$（$u$ 为喷气速率，恒为正）。
+
+\subsection*{2. 代入并整理}
+将 $F = -Mg$ 和 $u_{\text{相对}} = -u$ 代入方程：
+\[
+M a = -Mg + (-u) \frac{dM}{dt}
+\]
+整理得加速度的一般形式：
+\[
+a = -g - \frac{u}{M} \frac{dM}{dt}
+\]
+
+\subsection*{3. 结合题意化简}
+火箭质量随时间减少，因此 $\dfrac{dM}{dt} < 0$，题目中“每秒喷出的质量”为 $-\dfrac{dM}{dt}$（恒为正）。将 $\dfrac{dM}{dt} = -\left(-\dfrac{dM}{dt}\right)$ 代入上式：
+\[
+a = -g - \frac{u}{M} \left( -\left(-\frac{dM}{dt}\right) \right) = \frac{u}{M} \left( -\frac{dM}{dt} \right) - g
+\]
+
+$t=0$ 时，火箭质量为初质量 $M = M_0$，代入得：
+\[
+a = \frac{u}{M_0} \left( -\frac{dM}{dt} \right) - g
+\]
+与选项A的表达式完全一致。
+
+\section*{题目}
+\textcolor{blue}{如图所示，一质量为$m$的匀质细杆AB，A端靠在粗糙的竖直墙壁上，B端置于粗糙水平地面上而静止。杆身与竖直方向成$\theta$角，则A端对墙壁的压力大小[]。}
+\begin{enumerate}
+    \item[A] 为 $\dfrac{1}{4}mg\cos\theta$
+    \item[B] 为 $\dfrac{1}{2}mg\tan\theta$
+    \item[C] 为 $mg\sin\theta$
+    \item[D] 不能唯一确定
+\end{enumerate}
+
+\section*{解析}
+
+对细杆进行受力分析：
+- 重力 $mg$，作用在杆中点，竖直向下。
+
+- A端受力：墙壁的法向支持力 $N_A$（水平向右），以及竖直方向的静摩擦力 $f_A$。
+
+- B端受力：地面的法向支持力 $N_B$（竖直向上），以及水平方向的静摩擦力 $f_B$。
+
+设杆长为 $L$，建立平衡方程：
+
+1.  **水平方向力平衡**
+    \[
+    N_A = f_B
+    \]
+
+2.  **竖直方向力平衡**
+    \[
+    N_B + f_A = mg
+    \]
+
+3.  **力矩平衡（以B点为转轴）**
+    重力对B点的力矩为顺时针，A端水平力 $N_A$ 对B点的力矩为逆时针。
+    \[
+    mg \cdot \frac{L}{2} \sin\theta = N_A \cdot L \cos\theta
+    \]
+    化简可得：
+    \[
+    N_A = \frac{1}{2} mg \tan\theta
+    \]
+
+    但是，这里的关键问题在于：杆两端都是**粗糙接触面**，静摩擦力 $f_A$ 和 $f_B$ 的大小可以在零到最大静摩擦力之间变化。
+    我们再以A点为转轴列力矩平衡方程：
+    \[
+    mg \cdot \frac{L}{2} \sin\theta = N_B \cdot L \sin\theta - f_B \cdot L \cos\theta
+    \]
+    结合竖直方向平衡方程 $N_B = mg - f_A$，可以看出，不同的 $f_A$ 会导致不同的 $N_B$，进而影响水平摩擦力 $f_B$。
+    水平方向 $N_A = f_B$，因此 $N_A$ 的值不是唯一的，它取决于 $f_A$ 和 $f_B$ 的具体分配。
+
+题目没有给出墙壁和地面的摩擦系数，也没有说明摩擦的具体情况，因此静摩擦力的大小无法唯一确定，进而A端对墙壁的压力大小也不能唯一确定。
+[理论力学]
+
+\section*{题目}
+在惯性系$S$和对$S$作等速直线运动的$S'$中讨论一个质点系的运动时，下列的各种论述：
+\begin{enumerate}
+    \item 质点系在$S$系中若动量守恒，则在$S'$系中动量也一定守恒；
+    \item 质点系在$S$系中若机械能守恒，则在$S'$系中机械能也一定守恒；
+    \item 质点系在$S$系中若动量守恒，在$S'$系中动量不一定守恒；
+    \item 质点系在$S$系中若机械能守恒，在$S'$系中机械能不一定守恒；
+    \item 质点系在$S$系中若动量守恒，机械能也守恒，则在$S'$系中动量一定守恒，机械能也一定守恒；
+    \item 质点系在$S$系中若动量守恒，机械能也守恒，则在$S'$系中动量不一定守恒，机械能也不一定守恒。
+\end{enumerate}
+中，只有[\hspace{1em}]。
+
+\begin{enumerate}[label=\Alph*.]
+    \item (1)、(2)、(5)正确，其他都不正确；
+    \item (1)、(4)、(5)正确，其他都不正确；
+    \item (2)、(3)正确，其他都不正确；
+    \item (2)、(3)、(6)正确，其他都不正确；
+    \item (3)、(4)、(6)正确，其他都不正确。
+\end{enumerate}
+
+\section*{解析}
+设惯性系$S'$相对$S$以速度$V$匀速运动，质点系在$S$系中速度为$v_i$，在$S'$系中速度为$v_i' = v_i - V$。
+
+\subsection*{1. 动量守恒的不变性}
+$S$系中动量守恒：
+\[
+\sum m_i v_i = \text{常数}
+\]
+$S'$系中动量：
+\[
+\sum m_i v_i' = \sum m_i (v_i - V) = \sum m_i v_i - V\sum m_i
+\]
+因$V$和总质量$\sum m_i$为常数，故$S'$系中动量也为常数，因此(1)正确，(3)错误。
+
+\subsection*{2. 机械能守恒的非不变性}
+$S$系中动能：
+\[
+E_k = \frac{1}{2}\sum m_i v_i^2
+\]
+$S'$系中动能：
+\[
+E_k' = \frac{1}{2}\sum m_i (v_i - V)^2 = E_k - V \cdot \sum m_i v_i + \frac{1}{2}V^2\sum m_i
+\]
+可见$E_k'$中存在与总动量$P=\sum m_i v_i$相关的交叉项。
+
+- 若$S$系中仅机械能守恒（$E_k+E_p=\text{常数}$），但$P$不一定为常数，则$E_k'+E_p$不一定为常数，故(4)正确，(2)错误。
+
+- 若$S$系中同时动量守恒（$P=\text{常数}$）且机械能守恒，则$E_k'+E_p = (E_k+E_p) - V \cdot P + \frac{1}{2}MV^2$，结果为常数，因此$S'$系中机械能也守恒，故(5)正确，(6)错误。
+\section*{题目}
+\textcolor{blue}{一辆洒水车沿水平公路笔直前进，车与地面之间的摩擦系数$\mu=0.0100$，车载满水时质量$M_0=1.00\times10^4\ \text{kg}$。设洒水车匀速将水喷出，洒出的水相对于车的速率为$u=5.00\ \text{m/s}$，单位时间内喷出水的质量为$m_0=10.0\ \text{kg/s}$。洒水车在水平牵引力$F=4.00\times10^3\ \text{N}$的作用下在水平公路上由静止开始运动，并向外洒水。当水向车的正后方喷出时，由动量定理计算得到，洒水车在$t$时刻的速度$v=[\ ]$。（重力加速度$g=9.80\ \text{m/s}^2$）参数：$t=50.0\ \text{s}$}
+
+\begin{enumerate}
+    \item[A] 1.2 m/s
+    \item[B] 3.1 m/s
+    \item[C] 6.2 m/s
+    \item[D] 9.4 m/s
+    \item[E] 16 m/s
+\end{enumerate}
+
+\section*{解析}
+
+\subsection*{1. 模型与受力分析}
+本题为带恒定外力的变质量物体运动问题，受力包括：
+
+- 水平牵引力 $F$（正方向）
+
+- 滑动摩擦力 $f = -\mu M(t)g$（负方向）
+
+- 喷水推力 $u m_0$（水向后喷，推力向前，正方向）
+
+\noindent $t$ 时刻洒水车的质量：
+\[
+M(t) = M_0 - m_0 t
+\]
+
+\subsection*{2. 建立运动方程}
+根据变质量物体运动方程（密歇尔斯基方程）：
+\[
+M \frac{dv}{dt} = F - \mu M g + u m_0
+\]
+两边除以 $M(t)$：
+\[
+\frac{dv}{dt} = \frac{F + u m_0}{M_0 - m_0 t} - \mu g
+\]
+[u要带入负值]
+\subsection*{3. 积分求速度}
+对 $t$ 从 $0$ 到 $50\ \text{s}$ 积分（初始速度 $v_0=0$）：
+\[
+v(t) = \int_0^t \left( \frac{F + u m_0}{M_0 - m_0 \tau} - \mu g \right) d\tau
+\]
+\[
+v(t) = \frac{F + u m_0}{m_0} \ln\left( \frac{M_0}{M_0 - m_0 t} \right) - \mu g t
+\]
+
+\subsection*{4. 代入数值计算}
+\[
+F + u m_0 = 4000 + 5 \times 10 = 4050\ \text{N}
+\]
+\[
+\frac{4050}{10} = 405, \quad \ln\left(\frac{10000}{9500}\right) \approx 0.0513
+\]
+\[
+v = 405 \times 0.0513 - 0.01 \times 9.8 \times 50 \approx 20.8 - 4.9 = 15.9\ \text{m/s}
+\]
+
+\section*{题目}
+\textcolor{blue}{质量为20 kg，边长为1.0 m的均匀立方物体，放在水平地面上。拉力 F 作用在该物体一条顶边的中点，且与包含该顶边的其中一个竖直侧面垂直，地面极粗糙，物体不可能滑动，若要使该立方体旋转90度，则拉力$F$不能小于（）}
+
+\begin{enumerate}
+    \item[A] 49 N
+    \item[B] 98 N
+    \item[C] 157 N
+    \item[D] 196 N
+\end{enumerate}
+
+\section*{解析}
+
+本题为刚体绕棱边的力矩平衡问题，取立方体与地面接触的一条棱为转轴。
+
+1.  **受力与力矩分析**
+    
+- 物体重力：$mg$，作用在立方体中心，方向竖直向下。
+
+- 拉力：$F$，作用在侧面顶边中点，与侧面垂直，力臂为立方体边长 $a=1.0\ \text{m}$。
+
+- 重力对转轴的力臂：当立方体即将被拉起时，重心在转轴正上方的临界状态，重力的力臂为 $\dfrac{a}{2}$（水平距离）。
+
+2.  **力矩平衡条件**
+    要使立方体绕棱边转动，拉力的力矩至少等于重力的力矩：
+    \[
+    F \cdot a = mg \cdot \frac{a}{2}
+    \]
+    两边约去边长 $a$：
+    \[
+    F = \frac{mg}{2}
+    \]
+
+3.  **代入数值计算**
+    已知 $m=20\ \text{kg}$，$g=9.8\ \text{m/s}^2$：
+    \[
+    F = \frac{20 \times 9.8}{2} = 98\ \text{N}
+    \]
+
+
+\section*{题目}
+\textcolor{blue}{湖中有一小船，有人用绳绕过岸上一定高度处的定滑轮拉湖中的船向岸边运动。设该人以匀速率$v_0$收绳，绳不伸长、湖水静止，则小船的运动是[]。}
+
+\begin{enumerate}
+    \item[A] 匀加速运动
+    \item[B] 匀减速运动
+    \item[C] 变加速运动
+    \item[D] 变减速运动
+    \item[E] 匀速直线运动
+\end{enumerate}
+
+\section*{解析}
+设某一时刻绳子与水平方向夹角为$\theta$，小船水平速度为$v$。
+
+\subsection*{1. 速度分解}
+合速度，就是物体实际运动的速度，是唯一的、真实的速度。分量，是为了分析方便，把合速度分解到不同方向上的速度投影。
+在这道题里：
+
+小船的实际运动是水平向岸的，所以它的合速度 v 一定是水平方向的，这是 100\% 真实的速度。
+
+绳子的收绳速率$v_0$是小船速度沿绳方向的分量：
+\[
+v_0 = v \cos\theta \implies v = \frac{v_0}{\cos\theta}
+\]
+随着小船靠近岸边，$\theta$增大，$\cos\theta$减小，因此$v$增大，小船做加速运动。
+
+\subsection*{2. 加速度分析}
+对速度求导得加速度：
+\[
+a = \frac{dv}{dt} = v_0 \cdot \frac{\sin\theta}{\cos^2\theta} \cdot \frac{d\theta}{dt}
+\]
+
+
+
+设滑轮高度为 \(h\)，某时刻船水平距离岸边为 \(x\)，绳与水平方向夹角为 \(\theta\)。
+几何关系：
+\[
+\tan\theta = \frac{h}{x}
+\]
+
+\subsection*{1. 速度关系}
+人收绳速率 \(v_0\) 恒定，船的水平速度 \(v = -\dfrac{dx}{dt}\)。
+速度分解：
+\[
+v_0 = v\cos\theta \quad\Rightarrow\quad v = \frac{v_0}{\cos\theta}
+\]
+
+\subsection*{2. 对时间求导，推导 \(\dfrac{d\theta}{dt}\)}
+对 \(\tan\theta = \dfrac{h}{x}\) 两边关于 \(t\) 求导：
+\[
+\sec^2\theta \cdot \frac{d\theta}{dt} = -\frac{h}{x^2}\cdot \frac{dx}{dt}
+\]
+因为 \(\sec^2\theta = \dfrac{1}{\cos^2\theta}\)，且 \(v = -\dfrac{dx}{dt}\)，代入得：
+\[
+\frac{1}{\cos^2\theta}\cdot \frac{d\theta}{dt} = \frac{h}{x^2} v
+\]
+又 \(x = h\cot\theta\)，故 \(x^2 = h^2\cot^2\theta\)，代入并化简：
+
+\[
+\frac{d\theta}{dt} = \frac{v_0}{h} \cdot \frac{\sin^2\theta}{\cos\theta}
+\]
+
+因为 \(\theta\) 随时间增大，\(\sin\theta\) 不断变化，所以
+\[
+\boxed{\frac{d\theta}{dt} \text{ 不是常数}}
+\]
+
+\subsection*{3. 加速度推导（证明变加速）}
+\[
+a = \frac{dv}{dt} = \frac{d}{dt}\left(\frac{v_0}{\cos\theta}\right)
+     = v_0 \cdot \frac{\sin\theta}{\cos^2\theta}\cdot \frac{d\theta}{dt}
+\]
+将 \(\dfrac{d\theta}{dt} = \dfrac{v_0}{h}\sin\theta\) 代入：
+\[
+a = \frac{v_0^2}{h}\cdot \frac{\sin^3\theta}{\cos^3\theta}
+\]
+加速度 \(a\) 随 \(\theta\) 变化，因此小船做
+\[
+\boxed{\text{变加速直线运动}}
+\]
+
+\section*{题目}
+\textcolor{blue}{在水平面上匀速前进的小车上，固定一劲度系数为$K$的水平弹簧，弹簧上连一木块$m$，木块与小车间的摩擦可忽略不计，则在木块往返运动的过程中以下几种说法哪个正确？（$m$在$O$点时，弹簧为原长）}
+
+\begin{enumerate}
+    \item[A] 以小车为参考系，$m$、$K$系统机械能守恒
+    \item[B] 以地为参考系，$m$、$K$、地球系统机械能守恒
+    \item[C] 以地为参考系，$m$、$K$系统机械能守恒
+    \item[D] 以地为参考系，木块由A点运动到O点的过程中弹簧对物体做的功为$W = \dfrac{1}{2}K(OA)^2$
+\end{enumerate}
+
+\section*{解析}
+
+\subsection*{选项A}
+小车匀速运动，为惯性参考系。
+木块与弹簧组成的系统中：
+
+- 弹簧弹力为保守内力；
+
+- 无摩擦力做功；
+
+- 弹簧与小车连接点固定，小车对弹簧的作用力位移为0，不做功。
+因此系统机械能（动能+弹性势能）守恒，A正确。
+
+\subsection*{选项B}
+以地为参考系时，木块的速度为“小车速度+相对小车的速度[在周期性变化]”，木块的动能会随相对运动变化，与弹簧弹性势能之和不守恒。B错误。
+
+\subsection*{选项C}
+与B同理，以地为参考系时，木块动能变化，与弹簧弹性势能之和不守恒。C错误。
+
+\subsection*{选项D}
+弹簧做功的位移是木块相对地面的位移，不是相对小车的位移$OA$，因此不能直接用$OA$计算弹簧做功。D错误。
+
+
+\section*{题目}
+\textcolor{blue}{水平地面上放一物体A，它与地面间的滑动摩擦系数为$\mu$。现加一恒力$F$如图所示。欲使物体A有最大加速度，则恒力$F$与水平方向夹角$\theta$应满足（）}
+
+\begin{enumerate}
+    \item[A] $\sin\theta = \mu$
+    \item[B] $\cos\theta = \mu$
+    \item[C] $\tan\theta = \mu$
+    \item[D] $\cot\theta = \mu$
+\end{enumerate}
+
+\section*{解析}
+
+\subsection*{1. 受力分析与加速度表达式}
+竖直方向受力平衡：
+\[
+N + F\sin\theta = mg \implies N = mg - F\sin\theta
+\]
+水平方向牛顿第二定律：
+\[
+F\cos\theta - \mu N = ma
+\]
+代入$N$：
+\[
+F\cos\theta - \mu(mg - F\sin\theta) = ma
+\]
+整理得：
+\[
+a = \frac{F}{m}(\cos\theta + \mu\sin\theta) - \mu g
+\]
+
+\subsection*{2. 求加速度最大值}
+要使$a$最大，需最大化$f(\theta)=\cos\theta + \mu\sin\theta$。对$\theta$求导：
+\[
+\frac{df}{d\theta} = -\sin\theta + \mu\cos\theta = 0
+\]
+解得：
+\[
+\tan\theta = \mu
+\]
+[求导优于辅助角公式]
+
+\section*{题目}
+\textcolor{blue}{空心圆环可绕光滑的竖直固定轴AC自由转动，转动惯量为$J_0=2.00\ \text{kg·m}^2$，环的半径为$R$，环的初始角速度$\omega_0=\pi\ \text{rad/s}$。环的内壁和小球都是光滑的，小球可视为质点，环截面半径$r\ll R$。质量$m=0.500\ \text{kg}$的小球静止在环内最高处A点，由于某种微小干扰，小球沿环内下滑，当小球滑到环的最低处C点时，小球相对环的速度$v_c=[\ ]$。（两位有效数字，重力加速度$g=9.80\ \text{m/s}^2$。）参数：$R=0.700\ \text{m}$}
+
+\begin{enumerate}
+    \item[A] 4.4 m/s
+    \item[B] 5.2 m/s
+    \item[C] 5.6 m/s
+\end{enumerate}
+
+\section*{解析}
+
+\subsection*{1. 几何与角动量分析}
+转轴AC为竖直轴，穿过圆环圆心。小球在最高点A和最低点C时，位置均在转轴上，到转轴的垂直距离为0，因此对转轴的角动量始终为0。
+系统角动量守恒意味着圆环的角速度不变，始终为$\omega_0$。
+
+\subsection*{2. 机械能守恒}
+只有重力做功，系统机械能守恒。以C点为重力势能零点：
+\[
+mg\cdot 2R = \frac{1}{2}mv_c^2
+\]
+圆环的动能在过程中不变，因此小球的重力势能全部转化为自身的动能。
+
+\subsection*{3. 求解速度}
+\[
+v_c = \sqrt{4gR}
+\]
+代入数值：
+\[
+v_c = \sqrt{4 \times 9.80 \times 0.700} \approx 5.2\ \text{m/s}
+\]
+\section*{一、填空题（每题2分，共18分）}
+
+\begin{enumerate}
+    \item 质点沿直线运动，加速度满足 \( a = -kx \)。初始条件：\( t=0 \) 时，\( x=0 \)，\( v=v_0 \)。求速度 \( v \) 关于位置 \( x \) 的表达式。
+
+    \item 小明以 \( v=3\ \mathrm{m/s} \) 向东奔跑时，感觉风从正南方吹来；当他以 \( 6\ \mathrm{m/s} \) 向东奔跑时，感觉风从正东南方向吹来。求实际风速的大小。
+
+    \item \textcolor{blue}{光滑水平面上，距转轴分别为 \( r \) 和 \( 2r \) 处各有一质量为 \( m \) 的物块，转轴与物块、物块与物块之间均用轻弹簧相连。当系统以恒定角速度 \( \omega \) 转动且两弹簧长度相等时，两弹簧弹力大小之比为多少？}
+\vspace{0.5em}
+
+\textbf{解：}
+
+\noindent \textbf{1. 模型与受力分析}
+\begin{itemize}
+    \item 设转轴与物块1（距转轴 \( r \) 处）之间的弹簧弹力为 \( F_1 \)，物块1与物块2（距转轴 \( 2r \) 处）之间的弹簧弹力为 \( F_2 \)。
+    \item 由“两弹簧长度相等”的条件，可知弹簧1长度为 \( r \)，弹簧2长度为 \( 2r - r = r \)，两弹簧均处于拉伸状态，弹力为拉力。
+    \item 规定指向转轴的方向为正方向，向心力的合力沿正方向。
+\end{itemize}
+
+\noindent \textbf{2. 对物块2列向心力方程}
+物块2做匀速圆周运动，半径为 \( 2r \)，向心力仅由弹簧2的拉力提供：
+\[
+F_2 = m \omega^2 \cdot 2r
+\tag{1}
+\]
+
+\noindent \textbf{3. 对物块1列向心力方程}
+物块1做匀速圆周运动，半径为 \( r \)，受两个弹簧的拉力：弹簧1向内的拉力 \( F_1 \)（正方向）、弹簧2向外的拉力 \( F_2 \)（负方向），合力提供向心力：
+\[
+F_1 - F_2 = m \omega^2 \cdot r
+\tag{2}
+\]
+
+\noindent \textbf{4. 联立求解弹力比}
+将式(1)代入式(2)：
+\[
+F_1 - 2m\omega^2 r = m\omega^2 r
+\]
+整理得：
+\[
+F_1 = 3m\omega^2 r
+\]
+
+因此，两弹簧弹力大小之比为：
+\[
+\frac{F_1}{F_2} = \frac{3m\omega^2 r}{2m\omega^2 r} = \frac{3}{2}
+\]
+    \item 一颗子弹射向三个并排紧靠的相同木块，子弹在每个木块中受到的阻力大小相同，穿过每个木块的时间也相同。求子弹穿出后，三个木块从左到右的最终速度之比。
+
+    \item 倾角为 \( \theta \) 的光滑斜面上，一滑块与斜面顶端的弹簧相连，弹簧劲度系数为 \( k \)，初始时滑块静止。现给滑块沿斜面向下的初速度 \( v_0 \)，当弹簧伸长量为 \( x \) 时，求滑块的动能大小。
+
+    \item 电梯内有一质量为 \( m \) 的物体，相对电梯静止。电梯以竖直向下的加速度 \( a = \dfrac{g}{4} \) 向下运动高度 \( h \)，求此过程中电梯对物体做的功。
+
+    \item 一空心圆柱底面为圆环形，内半径 \( R_1 \)，外半径 \( R_2 \)，总质量为 \( m \)，且质量均匀分布。求该柱体绕中心几何轴线的转动惯量。
+
+    \item 某不稳定粒子静止质量为 \( m_0 \)，固有衰变时间为 \( \tau_0 \)，在实验室参考系中测得衰变时间为 \( \tau \)。求实验室中测得该粒子的动能。
+
+\vspace{0.5em}
+\textbf{解：}
+\begin{enumerate}
+    \item \textbf{时间膨胀效应求洛伦兹因子}
+    粒子的固有衰变时间 \( \tau_0 \) 为原时，实验室参考系中时间膨胀，满足公式：
+    \[
+    \tau = \frac{\tau_0}{\sqrt{1-\dfrac{v^2}{c^2}}} = \gamma \tau_0
+    \]
+    其中洛伦兹因子 \( \gamma = \dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}} \)，整理得：
+    \[
+    \gamma = \frac{\tau}{\tau_0}
+    \]
+
+    \item \textbf{相对论动能公式}
+    相对论中，粒子的动能等于总能量与静能的差值，公式为：
+    \[
+    E_k = \gamma m_0 c^2 - m_0 c^2 = (\gamma - 1) m_0 c^2
+    \]
+
+    \item \textbf{代入求解最终动能}
+    将 \( \gamma = \dfrac{\tau}{\tau_0} \) 代入动能公式：
+    \[
+    E_k = \left( \frac{\tau}{\tau_0} - 1 \right) m_0 c^2
+    \]
+\end{enumerate}
+    \item 从上小下大的喷头中竖直向上喷出的水柱最大高度为 \( H \)，喷头出口处高度不计，喷头上截面半径为 \( r \)，下截面半径为 \( R \)，水的密度为 \( \rho \)，大气压强为 \( p_0 \)。求喷头下截面处水的压强。
+\textbf{解：}
+\begin{enumerate}
+    \item 由机械能守恒验证：【取出口处为重力势能零点，一小段水的机械能守恒：出口动能=最高点重力势能】
+    \[
+    \frac{1}{2}\Delta m v_1^2 = \Delta m g H \implies v_1 = \sqrt{2gH}
+    \]
+
+    \item 连续性方程求下截面流速
+    上截面面积 \( S_1 = \pi r^2 \)，下截面面积 \( S_2 = \pi R^2 \)，
+    
+    由 \( S_1 v_1 = S_2 v_2 \)：
+    \[
+    v_2 = \frac{r^2}{R^2} \sqrt{2gH}
+    \]
+
+     \item \textbf{伯努利方程（计入高度差 h）求下截面压强}
+    
+     设下截面为位置1（高度 \( 0 \)，压强 \( p \)，流速 \( v_2 \)），
+    
+     最高点为位置2（高度 \( h+H \)，压强 \( p_0 \)，流速 0。
+    
+     伯努利方程：
+
+    合并化简：
+     \( p_0 + \rho g \left( h + H\left(1 - \dfrac{r^4}{R^4}\right) \right) \)
+
+\end{enumerate}
+\end{enumerate}
+
+\section*{二、计算题（共32分）}
+
+\begin{enumerate}
+    \item（10分）光滑水平面上有一长为 \( L \)、质量均匀分布为 \( m \) 的细杆，以垂直于杆方向的平动速度 \( v_0 \) 运动。杆前方有一固定立柱 \( OO' \)，细杆与立柱发生完全非弹性碰撞，碰撞点距杆一端 \( \dfrac{L}{3} \)。求碰撞瞬间细杆的角速度大小。
+\vspace{0.5em}
+
+\textbf{解：}
+\begin{enumerate}
+    \item \textbf{角动量守恒条件分析}
+    碰撞过程时间极短，立柱对杆的作用力通过碰撞点，对碰撞点的力矩为零，因此细杆对碰撞点的角动量守恒。
+
+    \item \textbf{计算碰撞前杆对碰撞点的角动量}
+    杆做平动，质心位于杆中点，距离碰撞点的距离为：
+    \[
+    d = \frac{L}{2} - \frac{L}{3} = \frac{L}{6}
+    \]
+    杆的质心速度为 \( v_0 \)，方向垂直于杆，因此对碰撞点的角动量大小为：
+    \[
+    L_1 = m v_0 d = m v_0 \cdot \frac{L}{6}
+    \]
+
+    \item \textbf{计算碰撞后杆绕碰撞点的转动惯量}
+    细杆对质心的转动惯量为：
+    \[
+    I_{\text{cm}} = \frac{1}{12} m L^2
+    \]
+    由平行轴定理，杆绕碰撞点的转动惯量为：
+    \[
+    I = I_{\text{cm}} + m d^2 = \frac{1}{12} m L^2 + m \left( \frac{L}{6} \right)^2
+    \]
+    化简得：
+    \[
+    I = \frac{1}{12} m L^2 + \frac{1}{36} m L^2 = \frac{1}{9} m L^2
+    \]
+
+    \item \textbf{角动量守恒方程求解角速度}
+    碰撞后杆绕碰撞点转动，角动量为 \( L_2 = I \omega \)。
+    由角动量守恒 \( L_1 = L_2 \)，得：
+    \[
+    m v_0 \cdot \frac{L}{6} = \frac{1}{9} m L^2 \cdot \omega
+    \]
+    约去 \( m \) 并整理得：
+    \[
+    \omega = \frac{3 v_0}{2 L}
+    \]
+\end{enumerate}
+    \item（10分）光滑水平桌面上，左车、轻弹簧、松弛轻绳、轻弹簧、右车依次连接。左车质量 \( m_1 \)，右车质量 \( m_2 \)，两弹簧劲度系数分别为 \( k_1 \)、\( k_2 \)。初始时整个系统静止，给左车一瞬时向左的初速度 \( v_0 \)。求当两车达到共同速度时，两弹簧的伸长量 \( \Delta x_1 \) 和 \( \Delta x_2 \)。
+
+    \item（6分）在惯性系 \( S \) 中，事件1和事件2发生在同一地点，事件1发生后经过 \( 3\ \mu\mathrm{s} \) 事件2发生。在惯性系 \( S' \) 中观测，两事件的时间间隔为 \( 5\ \mu\mathrm{s} \)。求 \( S' \) 系中两事件发生的位置间隔大小。
+\end{enumerate}
+
+\end{document}
